@@ -25,10 +25,16 @@ for i in range(9,0,-3):
         basic_axis.append([j,i])
 
 add_axis=[]
+for i in range(0,3,1):
+    for j in range(0,3,1):
+        add_axis.append([j,i])
+
 
 exist_parts=[[1,1,2],[2,1,3],[5,5,2]]
 for number in exist_parts:
     words=str(number[2])
+
+block_axis=[]
 
 matplotlib.pyplot.axis("off")
 matplotlib.pyplot.show()
