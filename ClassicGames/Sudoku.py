@@ -36,5 +36,13 @@ for number in exist_parts:
 
 block_axis=[]
 
+for number in exist_parts:
+    aixs_part=slice(0,2,1)
+    axis_value=number[aixs_part]
+    basic_value=basic_axis[axis_value[0]]
+    add_value=add_axis[axis_value[1]]
+    block_axis.append([basic_value[i]+add_value[i] for i in range(len(basic_value))])
+
+
 matplotlib.pyplot.axis("off")
 matplotlib.pyplot.show()
