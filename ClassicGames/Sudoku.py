@@ -31,8 +31,11 @@ for i in range(0,3,1):
 
 
 exist_parts=[[1,1,2],[2,1,3],[5,5,2]]
+words_li=[]
+
 for number in exist_parts:
     words=str(number[2])
+    words_li.append(words)
 
 block_axis=[]
 
@@ -42,6 +45,14 @@ for number in exist_parts:
     basic_value=basic_axis[axis_value[0]]
     add_value=add_axis[axis_value[1]]
     block_axis.append([basic_value[i]+add_value[i] for i in range(len(basic_value))])
+
+
+for i in range(len(block_axis)):
+    points=block_axis[i]
+    p_x=points[0]+0.5
+    p_y=points[1]-0.5
+    words=words_li[i]
+
 
 
 matplotlib.pyplot.axis("off")
